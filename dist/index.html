@@ -32,7 +32,7 @@
                       header: "Arm trotz Arbeit",
                       subHeader: "Was schätzen Sie: Wie vielen Frauen geht es so?",
                       teaser: `Susanne reinigt Krankenhausbetten. Ulrike ist studierte Opernsängerin und hat neun Jobs. Janina arbeitet daran mit zwei Kleinkindern wieder eine Stelle zu finden. Sandra hat vier Kinder und einen Job, für den sie überqualifiziert ist. Menschen hautnah hat vier Frauen begleitet, die wissen, was hart arbeiten bedeutet. Trotzdem ist ihre finanzielle Situation schwierig. Wir laden Sie ein zu schätzen, wie vielen Frauen es in Deutschland so geht.`,
-                      image: "../images/bar.png"};
+                      image: "media/bar.png"};
 
       question = {
         data: 36,
@@ -41,10 +41,10 @@
         unit: "%",
         yAxisMax: 100,
         textAboveHeading: "AUSBILDUNG",
-        textAbove: "In Deutschland arbeiten 78 % der Männer und knapp 70 % der Frauen. Damit liegt die Quote der Frauen gut 10 Prozentpunkte über dem Durchschnitt in der OECD. Im Bereich Ausbildung haben sich die Unterschiede zwischen Frauen und Männern in den vergangen Jahrzehnten stark verringert:",
+        textAbove: "In Deutschland arbeiten 78 % der Männer und knapp 70 % der Frauen. Damit liegt die Quote der Frauen gut 10 Prozentpunkte über dem Durchschnitt in der OECD.[1] Im Bereich Ausbildung haben sich die Unterschiede zwischen Frauen und Männern in den vergangen Jahrzehnten stark verringert:",
         resultHtml: "In der Generation der 30- bis 50-Jährigen sind Frauen nicht schlechter ausgebildet als Männer. Deutsche Frauen haben ebenso häufig einen Uni-Abschluss wie deutsche Männer und stellen die Hälfte des Arbeitskräftepotenzials.",
         textBelow: 'Unverändert groß sind jedoch die Unterschiede in der Studienfachwahl zwischen Frauen und Männern: 2009 entfielen zum Beispiel in Deutschland auf Frauen nur 16 Prozent der Uni-Abschlüsse in Informatik, dafür aber 70 Prozent im Gesundheits- und Sozialwesen. Die OECD hält dazu fest: “Diese Studienentscheidungen sind das Resultat unterschiedlicher Vorlieben und nicht geschlechtsspezifischer Begabungen.” Und sie bescheinigt Deutschland, dass “Bildung und Kompetenzen von Frauen auf dem deutschen Arbeitsmarkt nicht voll ausgeschöpft werden.”',
-        videoBelow: "../images/otten.mp4",
+        videoBelow: "./media/otten.mp4",
         dataSource: "<a href=\"https://www.bmfsfj.de/blob/83858/928434dae7d841aadc5d2b0ef137573b/20160307-studie-mitten-im-leben-data.pdf\"</a> Quelle: Mitten im Leben, Wünsche und Lebenswirklichkeiten von Frauen zwischen 30 und 50 Jahren - Seite 6",
       };
       questions.push(question);
@@ -103,5 +103,49 @@
         .attr("class", "chart")
         .call(myChart);
     </script>
+
+<hr>
+
+    <div class="credits">
+        <h3>Credits:</h3>
+
+        <p>Ein Film von Susanne Jäger</p>
+        <p>Online-Umsetzung von Patricia Ennenbach</p>
+        <p>Entwicklung: Christine Gotthardt, Patricia Ennenbach</p>
+        <p>Redaktion: Angela Jaenke</p>
+        <p>Design: Christine Gotthardt</p>
+
+        <h3>Quellen:</h3>
+
+        <h4>Ausbildung:</h4>
+        [1]: <a href="https://www.oecd.org/germany/Gender2017-DEU-de.pdf">“The Pursuit of Gender Equality: An Uphill Battle - Germany</a>
+        [2]: <a href="https://www.bmfsfj.de/blob/83858/928434dae7d841aadc5d2b0ef137573b/20160307-studie-mitten-im-leben-data.pdf">Mitten im Leben, Wünsche und Lebenswirklichkeiten von Frauen zwischen 30 und 50 Jahren - Seite 6</a>
+        [4]: <a href="https://www.oecd.org/germany/Gender2017-DEU-de.pdf">“The Pursuit of Gender Equality: An Uphill Battle - Germany</a>
+
+        <h4>Einkommen:</h4>
+       
+        <h4>Teilzeit:</h4>
+
+        <h4>Altersarmut:</h4>
+
+        <h3>Credits:</h3>
+        <p>"Was schätzen sie" beruht auf einer Vorlage der New York Times:</p>
+        <a href="https://www.nytimes.com/interactive/2017/01/15/us/politics/you-draw-obama-legacy.html?_r=0">
+            You Draw It: What Got Better or Worse During Obama’s Presidency
+        </a>
+
+        <p>Ein Dank an Mihael Ankers, der unseren <a href "https://github.com/wdr-data/you-draw-it">Was schätzen Sie</a> verbessert und das Recht eingeräumt hat, ihn zu nutzen:</p>
+        <a href="https://github.com/EE2dev/you-draw-it">Was schätzen Sie - mit Balkendiagrammen</a>
+
+        <p>Die Grafiken beruhen auf D3 von Mike Bostock:</p>
+        <a href="https://d3js.org/">D3.js - Data Driven Documents</a>
+    </div>
+
+    <div class="updatedAt">
+        {% set now = Date() %}
+        Stand: {{ now|date('d.m.Y') }}
+    </div>
+
+
   </body>
 </html>
