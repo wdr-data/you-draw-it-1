@@ -1018,7 +1018,7 @@
       q.lastPointShownAt
       q.yAxisMin
       q.yAxisMax
-        // the following are internal properties
+       // the following are internal properties
       q.chartType
       q.key
     */
@@ -1162,7 +1162,10 @@
 
       var intro = art.append("div").attr("class", "intro");
       intro.append("h1").append("div").attr("class", "globals-header update-font").html(options.globals.header);
-      intro.append("p").append("div").attr("class", "globals-subHeader update-font").html(options.globals.subHeader);
+      intro.append("h2").append("div").attr("class", "globals-subHeader update-font").html(options.globals.subHeader);
+      intro.append("h3").append("div").attr("class", "globals-teaser update-font").html(options.globals.teaser);
+      intro.append("h4").append("div").attr("class", "globals-textSubhead update-font").html(options.globals.textSubhead);
+      intro.append("p").append("div").attr("class", "globals-text update-font").html(options.globals.text);
 
       var questions = art.append("div").attr("class", "questions");
 

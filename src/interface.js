@@ -173,10 +173,24 @@ export default function () {
       .append("div")
       .attr("class", "globals-header update-font")
       .html(options.globals.header);
-    intro.append("p")
+    intro.append("h2")
       .append("div")
       .attr("class", "globals-subHeader update-font")
       .html(options.globals.subHeader);
+    intro.append("h3")
+      .append("div")
+      .attr("class", "globals-teaser update-font")
+      .html(options.globals.teaser);
+    intro.append("h4")
+      .append("div")
+      .attr("class", "globals-textSubhead update-font")
+      .html(options.globals.textSubhead);
+    intro.append("p")
+      .append("div")
+      .attr("class", "globals-text update-font")
+      .html(options.globals.text);
+
+
 
     const questions = art.append("div")
       .attr("class", "questions");
