@@ -1145,6 +1145,9 @@
         q.textBelow = typeof q.textBelow === "undefined" ? "" : q.textBelow;
         q.imageBelow = typeof q.imageBelow === "undefined" ? "" : q.imageBelow;
         q.videoBelow = typeof q.videoBelow === "undefined" ? "" : q.videoBelow;
+        q.textBelow2 = typeof q.textBelow2 === "undefined" ? "" : q.textBelow2;
+        q.imageBelow2 = typeof q.imageBelow2 === "undefined" ? "" : q.imageBelow2;
+        q.textBelow3 = typeof q.textBelow3 === "undefined" ? "" : q.textBelow3;
 
         if (q.chartType === "barChart") {
           q.data = [{ value: q.data }];
@@ -1199,6 +1202,12 @@
         question.append("img").attr("src", q.imageBelow);
 
         question.append("div").append("video").attr("controls", "true").append("source").attr("src", q.videoBelow).attr("type", "video/mp4");
+
+        question.append("p").append("div").attr("class", "textBelow2 update-font").html(q.textBelow2);
+
+        question.append("img").attr("src", q.imageBelow2);
+
+        question.append("p").append("div").attr("class", "textBelow3 update-font").html(q.textBelow3);
       });
     }
 

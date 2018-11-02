@@ -35,61 +35,65 @@
                       image: "media/bar.png"};
 
       question = {
-        data: 36,
+        textAboveHeading: "AUSBILDUNG",
+        textAbove: "In Deutschland arbeiten 78 % der Männer und knapp 70 % der Frauen. Damit liegt die Quote der Frauen gut 10 Prozentpunkte über dem Durchschnitt in der OECD.[1] Im Bereich Ausbildung haben sich die Unterschiede zwischen Frauen und Männern in den vergangenen Jahrzehnten stark verringert:",
         heading: "Was schätzen Sie:",
         subHeading: "Wie viele Frauen zwischen 30 und 50 Jahren haben Abitur?",
+        data: 36,
         unit: "%",
         yAxisMax: 100,
-        textAboveHeading: "AUSBILDUNG",
-        textAbove: "In Deutschland arbeiten 78 % der Männer und knapp 70 % der Frauen. Damit liegt die Quote der Frauen gut 10 Prozentpunkte über dem Durchschnitt in der OECD.[1] Im Bereich Ausbildung haben sich die Unterschiede zwischen Frauen und Männern in den vergangen Jahrzehnten stark verringert:",
-        resultHtml: "In der Generation der 30- bis 50-Jährigen sind Frauen nicht schlechter ausgebildet als Männer. Deutsche Frauen haben ebenso häufig einen Uni-Abschluss wie deutsche Männer und stellen die Hälfte des Arbeitskräftepotenzials.",
-        textBelow: 'Unverändert groß sind jedoch die Unterschiede in der Studienfachwahl zwischen Frauen und Männern: 2009 entfielen zum Beispiel in Deutschland auf Frauen nur 16 Prozent der Uni-Abschlüsse in Informatik, dafür aber 70 Prozent im Gesundheits- und Sozialwesen. Die OECD hält dazu fest: “Diese Studienentscheidungen sind das Resultat unterschiedlicher Vorlieben und nicht geschlechtsspezifischer Begabungen.” Und sie bescheinigt Deutschland, dass “Bildung und Kompetenzen von Frauen auf dem deutschen Arbeitsmarkt nicht voll ausgeschöpft werden.”',
-        videoBelow: "./media/otten.mp4",
         dataSource: "<a href=\"https://www.bmfsfj.de/blob/83858/928434dae7d841aadc5d2b0ef137573b/20160307-studie-mitten-im-leben-data.pdf\"</a> Quelle: Mitten im Leben, Wünsche und Lebenswirklichkeiten von Frauen zwischen 30 und 50 Jahren - Seite 6",
+        resultHtml: "In der Generation der 30- bis 50-Jährigen sind Frauen nicht schlechter ausgebildet als Männer. Deutsche Frauen haben ebenso häufig einen Uni-Abschluss wie deutsche Männer und stellen die Hälfte des Arbeitskräftepotenzials.",
+        textBelow: 'Unverändert groß sind jedoch die Unterschiede in der Studienfachwahl zwischen Frauen und Männern: 2009 entfielen zum Beispiel in Deutschland auf Frauen nur 16 Prozent der Uni-Abschlüsse in Informatik, dafür aber 70 Prozent im Gesundheits- und Sozialwesen. Die OECD hält dazu fest: “Diese Studienentscheidungen sind das Resultat unterschiedlicher Vorlieben und nicht geschlechtsspezifischer Begabungen.” Und sie bescheinigt Deutschland, dass “Bildung und Kompetenzen von Frauen auf dem deutschen Arbeitsmarkt nicht voll ausgeschöpft werden.[3]”',
+        videoBelow: "./media/otten.mp4",
       };
       questions.push(question);
 
       question = {
-        data: 23,
-        heading: "Question 2/5 - plants",
-        subHeading: "What is the percentage of plant life on our planet found in the ocean?",
+        textAboveHeading: "EINKOMMEN",
+        heading: "Was schätzen Sie:",
+        subHeading: "Wie viele Frauen zwischen 30 und 50 haben ein eigenes Nettoeinkommen von über 2.500 Euro?",
+        data: 5.1,
         unit: "%",
         yAxisMax: 100,
+        dataSource: "<a href=\"https://www.bmfsfj.de/blob/83858/928434dae7d841aadc5d2b0ef137573b/20160307-studie-mitten-im-leben-data.pdf\"</a> Quelle: Mitten im Leben, Wünsche und Lebenswirklichkeiten von Frauen zwischen 30 und 50 Jahren - Seite 8",
+        resultHtml: "Gut verdienende Frauen sind in Deutschland in der Minderheit. Das liegt neben der Berufswahl vor allem daran, wie Ehe und Rollenverteilung in Partnerschaften gelebt werden.",
+        textBelow: 'In keinem anderen OECD-Land tragen Frauen in einer Partnerschaft so wenig zum Haushaltseinkommen bei. Der durchschnittliche Anteil am Familieneinkommen beträgt in Deutschland 22,4 Prozent, in Dänemark sind es beispielsweise 42 Prozent. OECD-Schnitt sind 33%.[5]',
+        imageBelow: "./media/anteil_frauen_haushaltseinkommen.png",
+        textBelow2: "Die OECD stellt fest: “Deutschland hat OECD-weit als einziges Land ein Steuer- und Sozialsystem, das bei Familien mit schulpflichtigen Kindern Einverdienerhaushalte klar bevorzugt.” Gemeint ist das Ehegattensplitting, also die deutsche Variante der finanziellen Entlastung von Ehe und Familie. Eine Studie des Familienministeriums kam 2016 zu dem Ergebnis, dass das Ehegattensplitting dazu führt, dass verheiratete Frauen vor allem auf ihr Nettoeinkommen (nach Abzug der Steuern) schauen. Die gesplittete Verteilung der Steuern macht, dass Frauen ihre Einkommensleistung unterschätzen und Männer ihre überschätzen: “Diese verzerrten Einkommenseindrücke sind für Paare die Basis für weitere Entscheidungen wie Einkommenserwerb, Familienarbeit, Hausarbeit, Pflege von Angehörigen.”, schreibt das Familienministerium. \n Auch die Einführung des stark umstrittenen Betreuungsgelds für Kinder von 13 bis 36 Monaten kommt schlecht weg: “Sie könnte Mütter mit Kleinkindern verstärkt motivieren, zu Hause zu bleiben und so die ohnehin schon erheblichen Unterschiede zwischen Männern und Frauen auf dem deutschen Arbeitsmarkt verfestigen”. \n Das finanzielle Risiko dieser Unterstützung des höheren Einkommens tragen meist die Frauen: Knapp 15 % der Frauen im Alter zwischen 30 und 50 sind geschieden oder leben getrennt.",
+        videoBelow: "./media/otten.mp4",
+        textBelow3: "22 % der geschiedenen Frauen haben ein eigenes Nettoeinkommen unter 1.000 Euro; 59 % unter 1.500 Euro. Das Familienministerium dazu: “Vor allem Frauen, die während ihrer früheren Ehe nicht oder nur geringfügig erwerbstätig waren, haben nach der Scheidung (ohne neuen Partner) große Probleme, durch eigenes Erwerbseinkommen ihren Lebensstandard zu halten oder überhaupt ihre eigene Existenz zu finanzieren. Insofern stehen diese Frauen nach der Scheidung vor der Wahl, ihren Lebensstandard erheblich zu reduzieren mit geringen Möglichkeiten zur Altersvorsorge, oder sich in neue ökonomische Abhängigkeit von einem Hauptverdiener zu begeben.” \n 21 % der geschiedenen Frauen schaffen es, durch ihre Arbeit mehr als 2.000 Euro netto zu verdienen. Voraussetzung dafür in den meisten Fällen: Arbeit schon während der Ehe. [6] \n In den meisten OECD-Ländern ist heute das Zweiverdienermodell die Norm. Deutschland gehört zu den wenigen Ländern in denen 1,5 Einkommen in den Familien verbreitet sind. Im Ergebnis ist der Anteil der Frauen im reichen Land Deutschland bei den schlecht bezahlten Jobs hoch und bei den gut bezahlten niedrig. \n 2/3 aller ausschließlichen Minijobber in Deutschland sind Frauen. Darüber hinaus üben mehr Frauen als Männer neben einer sozialversicherungspflichtigen Hauptbeschäftigung einen Minijob als Nebenjob aus.",
+        imageBelow2: "./media/anteil_frauen_haushaltseinkommen.png",
       };
       questions.push(question);
 
       question = {
-        data: 11,
-        heading: "Question 3/5 - left handers",
-        subHeading: "What is the percentage of people who are left handed?",
+        textAboveHeading: "TEILZEIT",
+        textAbove: "Es sieht derzeit nicht so aus, als würde sich an der Verteilung der Erwerbsarbeit viel ändern: 2016 hatten 46 % der Frauen einen Teilzeitjob und 11 % der Männer. Auch wenn sich der Anteil der arbeitenden Frauen in den vergangenen zehn Jahren erhöht hat, beruht der Anstieg fast allein auf mehr mehr Teilzeitbeschäftigung. Die Zahl der vollzeitbeschäftigten Frauen hat sich im Grunde nicht verändert. Und die Lücke zwischen den Teilzeitquoten beider Geschlechter hat sich deutlich vergrößert.",
+        heading: "Was schätzen Sie:",
+        subHeading: "Bei etwa der Hälfte der Frauen sind Kinder oder die Pflege von Angehörigen der Grund für die Teilzeit. Was schätzen sie für wie viele Männer das der Grund für ihre Teilzeit ist?",
+        data: 9,
         unit: "%",
         yAxisMax: 100,
+        dataSource: "<a href=\"https://www.destatis.de/DE/Publikationen/Thematisch/Arbeitsmarkt/Erwerbstaetige/BroeschuereFrauenMaennerArbeitsmarkt0010018129004.pdf?__blob=publicationFile\"</a> Quelle: Frauen und Männer auf dem Arbeitsmarkt, Deutschland und Europa - Seite 43",
+        resultHtml: "Vor allem bei Deutschen mit Kindern gehen die Arbeitszeiten weit auseinander: Während Frauen (25-45 Jahre) mit mindestens einem Kind im Schnitt 17 Stunden arbeiten, arbeiten deutsche Männer in dieser Situation im Schnitt laut OECD 42 Stunden. Jeder dritte Vater wünschte sich 2015 in einer Umfrage des Familienministeriums mehr Zeit mit mit den Kindern und die meisten Väter würden gerne weniger arbeiten.",
+        textBelow: 'Eine bessere Aufteilung der Kinderbetreuung ist ein wichtiger Faktor, wenn es darum geht, Frauen zu ermöglichen, voll in den Arbeitsmarkt einzusteigen. Die Reform der Elternzeit in Deutschland hat dazu geführt, dass mehr Väter eine Auszeit für ihre Kinder nehmen. 2007 waren es nur 9 Prozent, im 2. Halbjahr 2010 bereits 25 Prozent. Insgesamt fehlt in Deutschland laut OECD aber vielerorts ein qualitativ hochwertiges und bezahlbares Betreuungsangebot.”',
+        videoBelow: "./media/otten.mp4",
       };
       questions.push(question);
 
       question = {
-        data: 23,
-        heading: "Question 4/5 - photocopier faults",
-        subHeading: "What is the percentage of all photocopier faults caused by people sitting on them and photocopying their butts?",
-        unit: "%",
-        yAxisMax: 100,
-      };
-      questions.push(question);
-
-      question = {
-        heading: "Question 5/5 - Winter Olympics",
-        subHeading: "How many volunteers have been helping at the corresponding Winter Olympics event?", 
-        data: [
-          {"1998 (JP)": 32000}, 
-          {"2002 (US)": 22000}, 
-          {"2006 (IT)": 18000}, 
-          {"2010 (CA)": 18500}, 
-          {"2014 (RU)": 25000}, 
-          {"2018 (CN)": 22400},
-          ],
-        lastPointShownAt: "2002 (US)",  
-        precision: 0, 
-        yAxisMax: 50000,
+        textAboveHeading: "ALTERSARMUT",
+        textAbove: "Die Zahl der Stunden ist eine Voraussetzung für ein gutes Einkommen, aber nicht allein. Im Gegenteil zeigt sich, dass auch bei höherer Stundenzahl Frauen systematisch nicht die Einkommen erwirtschaften wie Männer. Ein erheblicher Anteil der Frauen verdient trotz Vollzeitjob nur ein Einkommen knapp über der Armutsgrenze. Für sehr viele Frauen in der Mitte des Lebens stellen sich konkret erhebliche Schwierigkeiten, gar „Unmöglichkeiten“ der aktuellen eigenen Existenzsicherung, Risikovorsorge und Alterssicherung: Bei geringem Einkommen müssen sie sich entscheiden, ihr Budget zu verteilen oder zu konzentrieren, Prioritäten setzen z.B. nach Dringlichkeit – und damit einen Aspekt oder mehrere unterversorgen.",
+        heading: "Was schätzen Sie:",
+        subHeading: "Männer im Rentenalter bekamen 2016 in Westdeutschland im Schnitt 1078 Euro Rente. Wie hoch war die Rente bei den Frauen?",
+        data: 606,
+        unit: "€",
+        yAxisMax: 1100,
+        dataSource: "<a href=\"https://www.destatis.de/DE/Publikationen/Thematisch/Arbeitsmarkt/Erwerbstaetige/BroeschuereFrauenMaennerArbeitsmarkt0010018129004.pdf?__blob=publicationFile\"</a> Quelle: Frauen und Männer auf dem Arbeitsmarkt, Deutschland und Europa - Seite 43",
+        resultHtml: "Kürzere Beitragskarrieren, weniger Arbeitsstunden und niedrigere Einkommen führen auch zu relativ niedrigen Renten. Frauen erhalten im Schnitt nur etwa die Hälfte der durchschnittlichen Rente, die Männern ausbezahlt wird.",
+        textBelow: 'Dieses geschlechtsbedingte Rentengefälle ist das größte in der OECD. Zwei Drittel der deutschen Rentner sind Frauen, und die Rentenlücke zwischen Männern und Frauen ist ein wesentlicher Grund dafür, dass 10 Prozent von ihnen in Altersarmut leben.',
+        videoBelow: "./media/otten.mp4",
       };
       questions.push(question);
 
@@ -107,8 +111,7 @@
 <hr>
 
     <div class="credits">
-        <h3>Credits:</h3>
-
+        <h3>Team:</h3>
         <p>Ein Film von Susanne Jäger</p>
         <p>Online-Umsetzung von Patricia Ennenbach</p>
         <p>Entwicklung: Christine Gotthardt, Patricia Ennenbach</p>
@@ -120,9 +123,11 @@
         <h4>Ausbildung:</h4>
         [1]: <a href="https://www.oecd.org/germany/Gender2017-DEU-de.pdf">“The Pursuit of Gender Equality: An Uphill Battle - Germany</a>
         [2]: <a href="https://www.bmfsfj.de/blob/83858/928434dae7d841aadc5d2b0ef137573b/20160307-studie-mitten-im-leben-data.pdf">Mitten im Leben, Wünsche und Lebenswirklichkeiten von Frauen zwischen 30 und 50 Jahren - Seite 6</a>
-        [4]: <a href="https://www.oecd.org/germany/Gender2017-DEU-de.pdf">“The Pursuit of Gender Equality: An Uphill Battle - Germany</a>
+        [3]: <a href="https://www.oecd.org/germany/Gender2017-DEU-de.pdf">“The Pursuit of Gender Equality: An Uphill Battle - Germany</a>
 
         <h4>Einkommen:</h4>
+        [5]: <a href="https://read.oecd-ilibrary.org/social-issues-migration-health/dare-to-share-germany-s-experience-promoting-equal-partnership-in-families_9789264259157-en#page23">Dare to share, Germany's experience promoting equal partnership in families</a>
+        [6]: <a href="https://www.bmfsfj.de/blob/83858/928434dae7d841aadc5d2b0ef137573b/20160307-studie-mitten-im-leben-data.pdf">Mitten im Leben, Wünsche und Lebenswirklichkeiten von Frauen zwischen 30 und 50 Jahren - Seite 7</a>
        
         <h4>Teilzeit:</h4>
 
