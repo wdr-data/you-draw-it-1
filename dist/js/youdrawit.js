@@ -1065,7 +1065,7 @@
       if (lang === "de") {
         // de (German)
         g.resultButtonText = typeof g.resultButtonText === "undefined" ? "Zeig mir die Lösung!" : g.resultButtonText;
-        g.resultButtonTooltip = typeof g.resultButtonTooltip === "undefined" ? "Zeichnen Sie Ihre Einschätzung. Der Klick verrät, ob sie stimmt." : g.resultButtonTooltip;
+        g.resultButtonTooltip = typeof g.resultButtonTooltip === "undefined" ? "Ziehen Sie den Balken\nauf die entsprechende Höhe. Der Klick verrät, ob sie stimmt." : g.resultButtonTooltip;
         g.scoreTitle = typeof g.scoreTitle === "undefined" ? "Ihr Ergebnis:" : g.scoreTitle;
         g.scoreButtonText = typeof g.scoreButtonText === "undefined" ? "Zeig mir, wie gut ich war!" : g.scoreButtonText;
         g.scoreButtonTooltip = typeof g.scoreButtonTooltip === "undefined" ? "Klicken Sie hier, um Ihr Gesamtergebnis zu sehen" : g.scoreButtonTooltip;
@@ -1128,6 +1128,11 @@
           console.log("invalid result!");
         }
 
+        q.textAboveHeading = typeof q.textAboveHeading === "undefined" ? "" : q.textAboveHeading;
+        q.textAbove = typeof q.textAbove === "undefined" ? "" : q.textAbove;
+        q.imageAbove = typeof q.imageAbove === "undefined" ? "" : q.imageAbove;
+        q.videoAbove = typeof q.videoAbove === "undefined" ? "" : q.videoAbove;
+
         q.chartType = !isNumber(q.data) ? "timeSeries" : "barChart";
         q.heading = typeof q.heading === "undefined" ? "" : q.heading;
         q.subHeading = typeof q.subHeading === "undefined" ? "" : q.subHeading;
@@ -1135,6 +1140,11 @@
         q.unit = typeof q.unit === "undefined" ? "" : q.unit;
         q.precision = typeof q.precision === "undefined" ? 1 : q.precision;
         q.key = "q" + (index + 1);
+        q.dataSource = typeof q.dataSource === "undefined" ? "" : q.dataSource;
+
+        q.textBelow = typeof q.textBelow === "undefined" ? "" : q.textBelow;
+        q.imageBelow = typeof q.imageBelow === "undefined" ? "" : q.imageBelow;
+        q.videoBelow = typeof q.videoBelow === "undefined" ? "" : q.videoBelow;
 
         if (q.chartType === "barChart") {
           q.data = [{ value: q.data }];
@@ -1164,16 +1174,18 @@
       intro.append("h1").append("div").attr("class", "globals-header update-font").html(options.globals.header);
       intro.append("h2").append("div").attr("class", "globals-subHeader update-font").html(options.globals.subHeader);
       intro.append("h3").append("div").attr("class", "globals-teaser update-font").html(options.globals.teaser);
-      intro.append("h4").append("div").attr("class", "globals-textSubhead update-font").html(options.globals.textSubhead);
-      intro.append("p").append("div").attr("class", "globals-text update-font").html(options.globals.text);
+      intro.append("img").attr("src", options.globals.image);
 
       var questions = art.append("div").attr("class", "questions");
 
       options.questions.forEach(function (q) {
         var question = questions.append("div").attr("class", "question");
+        question.append("h2").append("div").attr("class", "textAboveHeading update-font").html(q.textAboveHeading);
+        question.append("p").append("div").attr("class", "textAbove update-font").html(q.textAbove);
         question.append("h2").append("div").attr("class", "question-heading update-font").html(q.heading);
         question.append("h3").append("div").attr("class", "question-subHeading update-font").html(q.subHeading);
         question.append("div").attr("class", "you-draw-it " + q.key).attr("data-key", q.key);
+        question.append("p").attr("class", "dataSource update-font").html(q.dataSource);
 
         var res = question.append("div").attr("class", "result " + q.key);
         var ac = res.append("div").attr("class", "actionContainer");
@@ -1181,6 +1193,12 @@
         ac.append("div").attr("class", "tooltipcontainer").append("span").attr("class", "tooltiptext globals-resultButtonTooltip update-font").text(options.globals.resultButtonTooltip);
 
         res.append("div").attr("class", "text").append("p").append("div").attr("class", "question-resultHtml update-font").html(q.resultHtml);
+
+        question.append("p").append("div").attr("class", "textBelow update-font").html(q.textBelow);
+
+        question.append("img").attr("src", q.imageBelow);
+
+        question.append("div").append("video").attr("controls", "true").append("source").attr("src", q.videoBelow).attr("type", "video/mp4");
       });
     }
 

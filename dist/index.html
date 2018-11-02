@@ -15,33 +15,37 @@
         text-align: left;
         }
         .update-font, .tick text {
-            font-family: 'Indie Flower', cursive;
+            font-family: 'Cabin', cursive;
             font-size: 1.5em;
         }
     </style>
   </head>
 
   <body>
-    <!--script src="../node_modules/d3/dist/d3.js"></script--> 
+    <!--script src="../node_modules/d3/dist/d3.js"></script-->
     <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="js/youdrawit.js"></script>    
+    <script src="js/youdrawit.js"></script>
     <script>
       var questions = [];
       var question = {};
-     
-      var globals = { default: "de", 
-                      header: "Arm trotz Arbeit", 
-                      subHeader: "Was schätzen Sie: Wie vielen Frauen geht es so?", 
+      var globals = { default: "de",
+                      header: "Arm trotz Arbeit",
+                      subHeader: "Was schätzen Sie: Wie vielen Frauen geht es so?",
                       teaser: `Susanne reinigt Krankenhausbetten. Ulrike ist studierte Opernsängerin und hat neun Jobs. Janina arbeitet daran mit zwei Kleinkindern wieder eine Stelle zu finden. Sandra hat vier Kinder und einen Job, für den sie überqualifiziert ist. Menschen hautnah hat vier Frauen begleitet, die wissen, was hart arbeiten bedeutet. Trotzdem ist ihre finanzielle Situation schwierig. Wir laden Sie ein zu schätzen, wie vielen Frauen es in Deutschland so geht.`,
-                      textSubhead: "AUSBILDUNG",
-                      text: "In Deutschland arbeiten 78 % der Männer und knapp 70 % der Frauen. Damit liegt die Quote der Frauen gut 10 Prozentpunkte über dem Durchschnitt in der OECD. Im Bereich Ausbildung haben sich die Unterschiede zwischen Frauen und Männern in den vergangen Jahrzehnten stark verringert:"};
+                      image: "../images/bar.png"};
 
       question = {
-        data: 34,
-        heading: "Was schätzen Sie: 1/4",
+        data: 36,
+        heading: "Was schätzen Sie:",
         subHeading: "Wie viele Frauen zwischen 30 und 50 Jahren haben Abitur?",
-        unit: "Prozent",
-
+        unit: "%",
+        yAxisMax: 100,
+        textAboveHeading: "AUSBILDUNG",
+        textAbove: "In Deutschland arbeiten 78 % der Männer und knapp 70 % der Frauen. Damit liegt die Quote der Frauen gut 10 Prozentpunkte über dem Durchschnitt in der OECD. Im Bereich Ausbildung haben sich die Unterschiede zwischen Frauen und Männern in den vergangen Jahrzehnten stark verringert:",
+        resultHtml: "In der Generation der 30- bis 50-Jährigen sind Frauen nicht schlechter ausgebildet als Männer. Deutsche Frauen haben ebenso häufig einen Uni-Abschluss wie deutsche Männer und stellen die Hälfte des Arbeitskräftepotenzials.",
+        textBelow: 'Unverändert groß sind jedoch die Unterschiede in der Studienfachwahl zwischen Frauen und Männern: 2009 entfielen zum Beispiel in Deutschland auf Frauen nur 16 Prozent der Uni-Abschlüsse in Informatik, dafür aber 70 Prozent im Gesundheits- und Sozialwesen. Die OECD hält dazu fest: “Diese Studienentscheidungen sind das Resultat unterschiedlicher Vorlieben und nicht geschlechtsspezifischer Begabungen.” Und sie bescheinigt Deutschland, dass “Bildung und Kompetenzen von Frauen auf dem deutschen Arbeitsmarkt nicht voll ausgeschöpft werden.”',
+        videoBelow: "../images/otten.mp4",
+        dataSource: "<a href=\"https://www.bmfsfj.de/blob/83858/928434dae7d841aadc5d2b0ef137573b/20160307-studie-mitten-im-leben-data.pdf\"</a> Quelle: Mitten im Leben, Wünsche und Lebenswirklichkeiten von Frauen zwischen 30 und 50 Jahren - Seite 6",
       };
       questions.push(question);
 
@@ -50,7 +54,7 @@
         heading: "Question 2/5 - plants",
         subHeading: "What is the percentage of plant life on our planet found in the ocean?",
         unit: "%",
-        yAxisMax: 100, 
+        yAxisMax: 100,
       };
       questions.push(question);
 
@@ -59,7 +63,7 @@
         heading: "Question 3/5 - left handers",
         subHeading: "What is the percentage of people who are left handed?",
         unit: "%",
-        yAxisMax: 100, 
+        yAxisMax: 100,
       };
       questions.push(question);
 
@@ -68,12 +72,12 @@
         heading: "Question 4/5 - photocopier faults",
         subHeading: "What is the percentage of all photocopier faults caused by people sitting on them and photocopying their butts?",
         unit: "%",
-        yAxisMax: 100, 
+        yAxisMax: 100,
       };
       questions.push(question);
 
-      question = { 
-        heading: "Question 5/5 - Winter Olympics", 
+      question = {
+        heading: "Question 5/5 - Winter Olympics",
         subHeading: "How many volunteers have been helping at the corresponding Winter Olympics event?", 
         data: [
           {"1998 (JP)": 32000}, 
