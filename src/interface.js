@@ -196,6 +196,10 @@ export default function () {
       .html(options.globals.teaser);
     intro.append("img")
       .attr("src", options.globals.image);
+    intro.append("video")
+      .attr("width", "60%")
+      .attr("controls", "true")
+      .attr("src", options.globals.video);
 
     const questions = art.append("div")
       .attr("class", "questions");
@@ -259,6 +263,7 @@ export default function () {
 
       question.append("div")
         .append("video")
+        .attr("width", "40%")
         .attr("controls", "true")
         .append("source")
         .attr("src", q.videoBelow)
@@ -270,6 +275,7 @@ export default function () {
         .html(q.textBelow2);
 
       question.append("img")
+        .attr("width", "50%")
         .attr("src", q.imageBelow2);
 
       question.append("p")

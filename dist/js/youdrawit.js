@@ -1178,6 +1178,7 @@
       intro.append("h2").append("div").attr("class", "globals-subHeader update-font").html(options.globals.subHeader);
       intro.append("h3").append("div").attr("class", "globals-teaser update-font").html(options.globals.teaser);
       intro.append("img").attr("src", options.globals.image);
+      intro.append("video").attr("width", "60%").attr("controls", "true").attr("src", options.globals.video);
 
       var questions = art.append("div").attr("class", "questions");
 
@@ -1201,11 +1202,11 @@
 
         question.append("img").attr("src", q.imageBelow);
 
-        question.append("div").append("video").attr("controls", "true").append("source").attr("src", q.videoBelow).attr("type", "video/mp4");
+        question.append("div").append("video").attr("width", "40%").attr("controls", "true").append("source").attr("src", q.videoBelow).attr("type", "video/mp4");
 
         question.append("p").append("div").attr("class", "textBelow2 update-font").html(q.textBelow2);
 
-        question.append("img").attr("src", q.imageBelow2);
+        question.append("img").attr("width", "50%").attr("src", q.imageBelow2);
 
         question.append("p").append("div").attr("class", "textBelow3 update-font").html(q.textBelow3);
       });
