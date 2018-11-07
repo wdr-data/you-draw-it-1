@@ -200,6 +200,10 @@ export default function () {
       .attr("width", "60%")
       .attr("controls", "true")
       .attr("src", options.globals.video);
+    intro.append("p")
+      .append("div")
+      .attr("class", "globals-link update-font")
+      .html(options.globals.link);
 
     const questions = art.append("div")
       .attr("class", "questions");
@@ -215,6 +219,12 @@ export default function () {
       .append("div")  
       .attr("class", "textAbove update-font") 
       .html(q.textAbove);
+      question.append("img")
+        .attr("src", q.imageAbove);
+      question.append("p") 
+        .append("div")  
+        .attr("class", "textAbove2 update-font") 
+
       question.append("h2")
         .append("div")
         .attr("class", "question-heading update-font")
@@ -261,6 +271,11 @@ export default function () {
       question.append("img")
         .attr("src", q.imageBelow);
 
+      question.append("p")
+        .append("div")
+        .attr("class", "textBelow2 update-font")
+        .html(q.textBelow2);
+
       question.append("div")
         .append("video")
         .attr("width", "40%")
@@ -268,11 +283,6 @@ export default function () {
         .append("source")
         .attr("src", q.videoBelow)
         .attr("type", "video/mp4");
-
-      question.append("p")
-        .append("div")
-        .attr("class", "textBelow2 update-font")
-        .html(q.textBelow2);
 
       question.append("img")
         .attr("width", "50%")

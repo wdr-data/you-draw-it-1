@@ -1179,6 +1179,7 @@
       intro.append("h3").append("div").attr("class", "globals-teaser update-font").html(options.globals.teaser);
       intro.append("img").attr("src", options.globals.image);
       intro.append("video").attr("width", "60%").attr("controls", "true").attr("src", options.globals.video);
+      intro.append("p").append("div").attr("class", "globals-link update-font").html(options.globals.link);
 
       var questions = art.append("div").attr("class", "questions");
 
@@ -1186,6 +1187,9 @@
         var question = questions.append("div").attr("class", "question");
         question.append("h2").append("div").attr("class", "textAboveHeading update-font").html(q.textAboveHeading);
         question.append("p").append("div").attr("class", "textAbove update-font").html(q.textAbove);
+        question.append("img").attr("src", q.imageAbove);
+        question.append("p").append("div").attr("class", "textAbove2 update-font");
+
         question.append("h2").append("div").attr("class", "question-heading update-font").html(q.heading);
         question.append("h3").append("div").attr("class", "question-subHeading update-font").html(q.subHeading);
         question.append("div").attr("class", "you-draw-it " + q.key).attr("data-key", q.key);
@@ -1202,9 +1206,9 @@
 
         question.append("img").attr("src", q.imageBelow);
 
-        question.append("div").append("video").attr("width", "40%").attr("controls", "true").append("source").attr("src", q.videoBelow).attr("type", "video/mp4");
-
         question.append("p").append("div").attr("class", "textBelow2 update-font").html(q.textBelow2);
+
+        question.append("div").append("video").attr("width", "40%").attr("controls", "true").append("source").attr("src", q.videoBelow).attr("type", "video/mp4");
 
         question.append("img").attr("width", "50%").attr("src", q.imageBelow2);
 
